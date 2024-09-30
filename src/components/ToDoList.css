@@ -1,87 +1,91 @@
+/* General container for the To-Do List */
 .todo-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-  }
-  
-  .todo-title {
-    text-align: center;
-    font-size: 24px;
-    color: #4b6584;
-    margin-bottom: 20px;
-    font-weight: bold;
-  }
-  
-  .input-field {
-    padding: 10px;
-    margin: 10px 0;
-    width: 100%;
-    border: 1px solid #dcdcdc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  .create-btn, .add-btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #2d98da;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .create-btn:hover, .add-btn:hover {
-    background-color: #3867d6;
-  }
-  
-  .list-container {
-    background-color: #f0f8ff;
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .list-container:hover {
-    transform: scale(1.02);
-  }
-  
-  .list-title {
-    font-size: 20px;
-    color: #34495e;
-    margin-bottom: 10px;
-  }
-  
-  .task-form {
-    margin-top: 20px;
-  }
-  
-  .task-form h5 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: #34495e;
-  }
-  
-  .input-field {
-    margin-bottom: 10px;
-    padding: 10px;
-    width: calc(100% - 20px);
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .add-btn {
-    background-color: #27ae60;
-    color: #fff;
-  }
-  
-  .add-btn:hover {
-    background-color: #2ecc71;
-  }
-  
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  height: 100vh; /* Ensure the container takes full viewport height */
+  overflow-y: auto; /* Add scrollbar if content exceeds height */
+}
+
+/* To-Do List Title */
+.todo-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input fields styling */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Button styling for create and add */
+.create-btn, .add-task-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Task lists layout container */
+.lists-container {
+  display: flex;
+  flex-wrap: wrap; /* Wrap lists to the next line if they exceed the width */
+  gap: 20px;
+  padding: 20px 0;
+}
+
+/* Individual list column */
+.list-column {
+  flex: 1;
+  min-width: 300px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Title of the list */
+.list-title {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Priority section within a list */
+.priority-section {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+}
+
+/* Title for priority level */
+.priority-title {
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Task form styling */
+.task-form {
+  margin-top: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
