@@ -1,18 +1,19 @@
-import React from "react";
+import React from 'react';
 
-const Task = React.forwardRef(({ task, provided }, ref) => {
+const Task = ({ task, provided }) => {
   return (
     <div
-      ref={ref}
+      ref={provided.innerRef}
       {...provided.draggableProps}
       {...provided.dragHandleProps}
-      className="task"
+      className="task-item"
     >
-      <h5>{task.title}</h5>
+      <h4>{task.title}</h4>
       <p>{task.description}</p>
-      <p>Due Date: {task.dueDate}</p>
+      <p>Due: {task.dueDate}</p>
+      <p>Priority: {task.priority}</p>
     </div>
   );
-});
+};
 
 export default Task;
