@@ -5,8 +5,9 @@
   padding: 20px;
   background-color: #f4f4f4;
   border-radius: 10px;
-  height: 100vh; /* Ensure the container takes full viewport height */
-  overflow-y: auto; /* Add scrollbar if content exceeds height */
+  height: 80vh;
+  width: 100vh; /* Use height in vh for better responsiveness */
+  overflow-y: auto; /* Ensure the container scrolls if the content exceeds height */
 }
 
 /* To-Do List Title */
@@ -27,7 +28,7 @@
 }
 
 /* Button styling for create and add */
-.create-btn, .add-task-btn {
+.create-btn, .add-task-btn, .logout-btn {
   background-color: #28a745;
   color: white;
   padding: 10px 20px;
@@ -48,44 +49,36 @@
 /* Individual list column */
 .list-column {
   flex: 1;
-  min-width: 300px;
+  min-width: 250px; /* Ensure minimum width for each column */
+  max-width: 400px;
+  padding: 15px;
   background-color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-/* Title of the list */
-.list-title {
-  text-align: center;
-  font-size: 18px;
-  margin-bottom: 10px;
-  background-color: #007bff;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-/* Priority section within a list */
-.priority-section {
-  margin-bottom: 10px;
-  padding: 10px;
-  background-color: #e9ecef;
-  border-radius: 5px;
-}
-
-/* Title for priority level */
-.priority-title {
-  font-size: 16px;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-/* Task form styling */
-.task-form {
-  margin-top: 20px;
-  background-color: white;
-  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Priority sections inside the list */
+.priority-section {
+  background-color: #e9ecef;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* Priority title */
+.priority-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* Ensure the task container is scrollable when dragging */
+.list-column {
+  height: 60vh; /* Limit height for scrollable lists */
+  overflow-y: auto; /* Enable scroll inside list columns */
+}
+
+/* Adjust scrolling issue while dragging */
+.priority-section {
+  max-height: 50vh; /* Constrain the height for priority sections */
+  overflow-y: auto;
 }
