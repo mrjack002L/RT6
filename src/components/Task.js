@@ -11,7 +11,7 @@ const Task = ({ task, provided }) => {
       <h4>{task.title}</h4>
       <p>{task.description}</p>
       <p>Due: {task.dueDate}</p>
-      <p>Priority: {task.priority}</p>
+      
     </div>
   );
 };
