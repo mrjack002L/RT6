@@ -12,7 +12,7 @@ function Login() {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       console.log("User logged in Successfully");
-      window.location.href = "/profile";
+      window.location.href = "/todolist";
       toast.success("User logged in Successfully", {
         position: "top-center",
       });
